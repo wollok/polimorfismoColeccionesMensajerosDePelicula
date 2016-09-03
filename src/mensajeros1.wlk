@@ -1,6 +1,5 @@
 // Mensajeros de pelicula, primera parte
 
-
 object roberto {
 	var peso = 90
 	var transporte = camion
@@ -50,18 +49,18 @@ object bicicleta {
 }
 
 object neo {
-	var credito = 10
+	var credito = 7
 
 	method peso() {
 		return 0
 	}
 
-	method consumirCredito(cantidad) {
-		credito = credito - cantidad
+	method llamar() {
+		credito = credito - 5
 	}
 
 	method tieneCredito() {
-		return credito > 0
+		return credito > 5
 	}
 }
 
@@ -81,7 +80,7 @@ object matrix {
 
 object paquete {
 	var pago = false
-	var destino
+	var destino = matrix
 
 	method pagar() {
 		pago = true
