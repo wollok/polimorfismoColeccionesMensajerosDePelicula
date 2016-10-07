@@ -25,6 +25,9 @@ object mensajeria {
 	method pesoDelUltimo(){
 		return mensajeros.last().peso()
 	}
+	method mensajeros(){
+		return mensajeros
+	}
 	
 	//Tercera parte
 	method algunoPuedeEntregar(unPaquete) {
