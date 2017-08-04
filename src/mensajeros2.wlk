@@ -29,7 +29,7 @@ object mensajeria {
 		return mensajeros
 	}
 	
-	// Tercera parte
+	//Tercera parte
 	method algunoPuedeEntregar(unPaquete) {
 		return mensajeros.any({mens=>unPaquete.puedeSerEntregadoPor(mens)})
 	}
