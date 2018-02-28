@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
-	<name>PolimorfismoMensajerosDepelicula</name>
-=======
-	<name>Polimorfismo Mensajeros de pelicula</name>
->>>>>>> branch 'master' of https://github.com/wollok/Polimorfismo-Colecciones-Mensajeros-de-pelicula.git
+	<name>polimorfismoMensajerosDePelicula</name>
 	<comment></comment>
 	<projects>
 	</projects>
