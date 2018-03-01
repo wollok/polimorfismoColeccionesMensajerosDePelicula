@@ -2,9 +2,9 @@
 Ejercicio incremental, primera parte con colecciones, segunda parte con mensajes basicos de coleccione, tercera parte con colecciones y bloques
 
 
-#Mensajeros de Película
+# Mensajeros de Película
 
-##Primera parte: Destinos y mensajeros
+## Primera parte: Destinos y mensajeros
 
 Desarrollar y probar un programa que me permita saber si mi paquete puede ser entregado por un mensajero. Un paquete puede entregarse cuando el mensajero puede llegar al destino indicado y además el paquete está pago.
 
@@ -25,7 +25,7 @@ Realizar una serie de tests, donde se prueben las diferentes situaciones, entre 
 Que roberto (90kg) puede llevar un paquete que está pago en un camión que tiene un acoplado.
 Que neo con crédito no puede llevar un paquete que no está pago a la matrix.
 
-##Segunda parte: Empresa de mensajería 
+## Segunda parte: Empresa de mensajería 
 
 Ahora aparece una empresa de mensajería. Esta tiene un conjunto de mensajeros, los cuales podrían ser Roberto, Chuck y Neo. 
 
@@ -40,7 +40,7 @@ Se necesita poder hacer:
 - Hacer algunos test significativos.
 
 
-##Tercera parte: Mensajería  recargada
+## Tercera parte: Mensajería  recargada
 
 Nuevos requerimientos para la mensajería.
 Se necesita saber:
