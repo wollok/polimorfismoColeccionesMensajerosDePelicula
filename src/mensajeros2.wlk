@@ -1,12 +1,12 @@
-// Mensajería partes 2 y 3
+// MensajerÃ­a partes 2 y 3 y mas alla
 
 import mensajeros1.*
 
 object mensajeria {
 	var mensajeros = []
-	var entregas = []
+	var property entregas = []
 	
-	//Segunda parte
+	//Segunda parte 
 	method contratar(empleado){
 		mensajeros.add(empleado)
 	}
@@ -19,8 +19,8 @@ object mensajeria {
 	method esGrande(){
 		return mensajeros.size()>2
 	} 
-	method elPrimeroPuedeEntregar(unPaquete) {
-		return unPaquete.puedeSerEntregadoPor(return mensajeros.first())
+	method elPrimeroPuedeEntregar() {
+		return paquete.puedeSerEntregadoPor(mensajeros.first())
 	}
 	method pesoDelUltimo(){
 		return mensajeros.last().peso()
@@ -46,8 +46,10 @@ object mensajeria {
 		return mensajeros.sum({mens=>mens.peso()})/mensajeros.size()
 	}
 	method enviar(unPaquete){
-		if (!self.algunoPuedeEntregar(unPaquete)) 
+		if (!self.algunoPuedeEntregar(unPaquete))  
 			error.throwWithMessage("No hay mensajeros disponibles")
+		
 		entregas.add(unPaquete)
+		
 	}
 }
