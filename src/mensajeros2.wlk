@@ -11,6 +11,7 @@ object mensajeria {
 		mensajeros.add(empleado)
 	}
 	method despedirATodos() {
+		//hola
 		mensajeros.clear()
 	}
 	method despedir(empleado){
