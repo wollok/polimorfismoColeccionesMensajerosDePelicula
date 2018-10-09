@@ -21,8 +21,8 @@ object mensajeria {
 	method esGrande(){
 		return mensajeros.size()>2
 	} 
-	method elPrimeroPuedeEntregar() {
-		return paquete.puedeSerEntregadoPor(mensajeros.first())
+	method elPrimeroPuedeEntregar(unPaquete) {
+		return unPaquete.puedeSerEntregadoPor(mensajeros.first())
 	}
 	method pesoDelUltimo(){
 		return mensajeros.last().peso()
