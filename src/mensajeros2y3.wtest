@@ -1,11 +1,7 @@
-import mensajeros2.*
+import mensajeros2y3.*
 import mensajeros1.*
 
 describe "conjunto de tests de los mensajeros" { 
-
-	var paquete = new Paquete(destino=matrix)
-	var camion = new Camion(acoplados=2)
-	var roberto = new Transportista(peso=90,transporte= camion)
 	
 	fixture{
 		paquete.pagar()
@@ -18,25 +14,24 @@ describe "conjunto de tests de los mensajeros" {
 	}
 	
 	test "La mensajeria tiene a neo como empleado si lo agregarmos" {
-		paquete.destino(brooklyn)
 		self.agregarMuchosMensajeros()
 		assert.that(mensajeria.mensajeros().contains(neo))
 	}
 	
 	test "Si neo es empleado, Hay un mensajero que puede enviar el paquete" {
 		mensajeria.contratar(neo)
-		assert.that(mensajeria.algunoPuedeEntregar(paquete))
+		assert.that(mensajeria.algunoPuedeEntregar())
 	}
 	
 	test "El paquete fue enviado" {
 		self.agregarMuchosMensajeros()
-		mensajeria.enviar(paquete)
-		assert.that(mensajeria.entregas().contains(paquete))
+		mensajeria.enviar()
+		assert.that(mensajeria.entregados().contains(paquete))
 	}
 	test "Si no hay mensajeros, el paquete no se envia" {
 		
-		assert.throwsException({mensajeria.enviar(paquete)})
-		assert.notThat(mensajeria.entregas().contains(paquete))
+		assert.throwsException({mensajeria.enviar()})
+		assert.notThat(mensajeria.entregados().contains(paquete))
 	}
 	
 	test "roberto con camion y 2 acoplado no pasa por el puente"{

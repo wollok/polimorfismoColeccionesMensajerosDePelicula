@@ -4,14 +4,13 @@ import mensajeros1.*
 
 object mensajeria {
 	var mensajeros = []
-	var property entregas = []
+	var entregados = []
 	
 	//Segunda parte 
 	method contratar(empleado){
 		mensajeros.add(empleado)
 	}
 	method despedirATodos() {
-		//hola
 		mensajeros.clear()
 	}
 	method despedir(empleado){
@@ -26,19 +25,26 @@ object mensajeria {
 	method pesoDelUltimo(){
 		return mensajeros.last().peso()
 	}
+	
+	//solo para testear
 	method mensajeros(){
 		return mensajeros
 	}
+	//solo para testear
+	method entregados() {
+		return entregados
+	}
+	
 	
 	//Tercera parte
-	method algunoPuedeEntregar(unPaquete) {
-		return mensajeros.any({mens=>unPaquete.puedeSerEntregadoPor(mens)})
+	method algunoPuedeEntregar() {
+		return mensajeros.any({mens=>paquete.puedeSerEntregadoPor(mens)})
 	}
-	method paqueteFacil(unPaquete) {
-		return mensajeros.all({mens=>unPaquete.puedeSerEntregadoPor(mens)})
+	method paqueteFacil() {
+		return mensajeros.all({mens=>paquete.puedeSerEntregadoPor(mens)})
 	}
-	method candidatosPara(unPaquete) {
-		return mensajeros.filter({mens=>unPaquete.puedeSerEntregadoPor(mens)})
+	method candidatosPara() {
+		return mensajeros.filter({mens=>paquete.puedeSerEntregadoPor(mens)})
 	}
 	method tieneSobrepeso(){
 		return self.pesoPromedio()> 500
@@ -46,11 +52,11 @@ object mensajeria {
 	method pesoPromedio(){
 		return mensajeros.sum({mens=>mens.peso()})/mensajeros.size()
 	}
-	method enviar(unPaquete){
-		if (!self.algunoPuedeEntregar(unPaquete))  
+	method enviar(){
+		if (!self.algunoPuedeEntregar())  
 			error.throwWithMessage("No hay mensajeros disponibles")
 		
-		entregas.add(unPaquete)
+		entregados.add(paquete)
 		
 	}
 }

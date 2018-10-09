@@ -1,16 +1,16 @@
 // Mensajeros de pelicula, primera parte
 
-class Transportista {
+object roberto {
 	var peso = 90
-	var property transporte = new Camion(acoplados=1)
+	var transporte = camion 
 
 	method peso() {
 		return peso + transporte.peso()
 	}
 
-//	method transporte(vehiculo) {
-//		transporte = vehiculo
-//	}
+	method transporte(vehiculo) {
+		transporte = vehiculo
+	}
 
 	method tieneCredito() {
 		return false
@@ -29,16 +29,16 @@ object chuck {
 	}
 } 
 
-class Camion {
+object camion {
 	var property acoplados = 2
 
 	method peso() {
 		return acoplados * 500
 	}
 
-//	method acoplados(cantAcoplados) {
-//		acoplados = cantAcoplados
-//	}
+	method acoplados(cantAcoplados) {
+		acoplados = cantAcoplados
+	}
 }
 
 object bicicleta {
@@ -78,50 +78,27 @@ object matrix {
 	}
 }
 
-class Paquete {
-	var property estaPago = false
-	var property destino = matrix
+object paquete {
+	var estaPago = false
+	var destino = matrix
 
 	method pagar() {
 		estaPago = true
 	}
 
-//	method estaPago() {
-//		return estaPago
-//	}
+	method estaPago() {
+		return estaPago
+	}
 
-//	method destino(lugar) {
-//		destino = lugar
-//	}
+	method destino(lugar) {
+		destino = lugar
+	}
 
 	method puedeSerEntregadoPor(mensajero) {
 		return destino.dejarPasar(mensajero) and self.estaPago()
 	}
+	
+	//Solo para parte 4
+	method precio() = 50
 }
 
-class Paquetin {
-	
-	method puedeSerEntregadoPor(mensajero) {
-		return true
-	}
-}
-
-class Paqueton {
-	var destinos = []
-	var precioUnitario = 100
-	var importePagado = 0
-	
-	method pagar(monto){
-		importePagado += monto 
-	}
-	
-	method estaPago() {
-		return importePagado >= destinos.size()*precioUnitario
-	}
-	method puedeSerEntregadoPor(mensajero) {
-	    return self.puedePasarPorDestinos(mensajero) && self.estaPago() 
-	}
-	method puedePasarPorDestinos(mensajero) {
-		return destinos.all{d=>d.dejaPasar(mensajero)}
-	}
-}
