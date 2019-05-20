@@ -1,4 +1,7 @@
 # Polimorfismo-Colecciones-Mensajeros-de-pelicula
+ 
+[![Build Status](https://travis-ci.org/wollok/polimorfismoColeccionesMensajerosDePelicula.svg?branch=master)](https://travis-ci.org/wollok/polimorfismoColeccionesMensajerosDePelicula)
+
 Ejercicio incremental, primera parte con colecciones, segunda parte con mensajes basicos de coleccione, tercera parte con colecciones y bloques
 
 
