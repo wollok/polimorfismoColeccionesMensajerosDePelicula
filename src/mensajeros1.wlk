@@ -1,7 +1,7 @@
 // Mensajeros de pelicula, primera parte
 
 object roberto {
-	var peso = 90
+	var peso = 90 
 	var transporte = camion 
 
 	method peso() {

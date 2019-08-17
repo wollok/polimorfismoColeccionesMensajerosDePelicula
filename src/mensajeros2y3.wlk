@@ -54,7 +54,7 @@ object mensajeria {
 	}
 	method enviar(){
 		if (!self.algunoPuedeEntregar())  
-			error.throwWithMessage("No hay mensajeros disponibles")
+			self.error("No hay mensajeros disponibles")
 		
 		entregados.add(paquete)
 		

@@ -2,7 +2,7 @@
 
 import mensajeros1.*
 
-object mensajeria {
+object mensajeria{
 	const property mensajeros = []
 	const property entregados = []
 	// nueva coleccion
@@ -47,7 +47,7 @@ object mensajeria {
 	}
 	method enviar(unPaquete){
 		if (!self.algunoPuedeEntregar(unPaquete))  
-			error.throwWithMessage("No hay mensajeros disponibles")
+			self.error("No hay mensajeros disponibles")
 		
 		entregados.add(unPaquete)
 		pendientes.remove( unPaquete)

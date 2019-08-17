@@ -1,6 +1,6 @@
 // Mensajeros de pelicula, quinta parte
 
-class Transportista {
+class Transportista  {
 	var peso = 90
 	var property transporte = new Camion(acoplados=1)
 
@@ -16,7 +16,7 @@ object chuck {
 	method tieneCredito() = true 
 } 
 
-class Camion {
+class Camion{
 	var property acoplados = 2
 	method peso() = acoplados * 500
 }
@@ -109,7 +109,7 @@ object mensajeria {
 		mensajeros.add(empleado)
 	}
 	method despedirATodos() {
-		mensajeros.clear()
+		mensajeros.clear() 
 	}
 	method despedir(empleado){
 		mensajeros.remove(empleado)
@@ -143,10 +143,10 @@ object mensajeria {
 	}
 	method enviar(unPaquete){
 		if (!self.algunoPuedeEntregar(unPaquete))  
-			error.throwWithMessage("No hay mensajeros disponibles")
+			self.error("No hay mensajeros disponibles")
 		
 		entregados.add(unPaquete)
-		pendientes.remove( unPaquete)
+		pendientes.remove(unPaquete)
 		
 	}
 	// nuevos requerimientos cuarta parte
