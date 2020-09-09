@@ -11,8 +11,8 @@ object paquetin {
 }
 
 object paqueton {
-	var destinos = [brooklyn,matrix]
-	var precioUnitario = 100
+	const destinos = [brooklyn,matrix]
+	const precioUnitario = 100
 	var importePagado = 0
 	
 	method pagar(importe){

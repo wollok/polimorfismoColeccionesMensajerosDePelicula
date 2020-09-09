@@ -7,6 +7,7 @@ object mensajeria {
 	// tercera parte
 	const enviados = []
 	const pendientes = []
+	var facturado = 0
   
   	// segunda parte
 	method contratar(alguien){
@@ -55,18 +56,20 @@ object mensajeria {
 	}
 
 	method tieneSobrepeso(){
-		return mensajeros.sum({mens=>mens.peso()}) > 500
+		return mensajeros.sum({mens=>mens.peso()})/mensajeros.size() > 500
 	}
 	
 	method enviar(unPaquete){
 		if (self.algunoPuedeEntregar(unPaquete))  
-			enviados.add(unPaquete)
+			//enviados.add(unPaquete)
+			facturado += unPaquete.precio()
 		else
 			pendientes.add(unPaquete)
 	}
 	
 	method facturacion(){
-		return enviados.sum({paq=>paq.precio()})
+		//return enviados.sum({paq=>paq.precio()})
+		return facturado
 	}
 	
 	method enviarVarios(paquetes){
