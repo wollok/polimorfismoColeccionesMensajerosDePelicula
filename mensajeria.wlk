@@ -60,11 +60,13 @@ object mensajeria {
 	}
 	
 	method enviar(unPaquete){
-		if (self.algunoPuedeEntregar(unPaquete))  
-			//enviados.add(unPaquete)
+		if (self.algunoPuedeEntregar(unPaquete)) {
+			enviados.add(unPaquete)
 			facturado += unPaquete.precio()
-		else
+		}
+		else {
 			pendientes.add(unPaquete)
+		}
 	}
 	
 	method facturacion(){
