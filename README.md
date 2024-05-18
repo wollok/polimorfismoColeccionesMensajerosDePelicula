@@ -4,7 +4,7 @@
 
 [![build](https://github.com/wollok/polimorfismoColeccionesMensajerosDePelicula/actions/workflows/ci.yml/badge.svg)](https://github.com/wollok/polimorfismoColeccionesMensajerosDePelicula/actions/workflows/ci.yml)
 
-![](matrix.jpeg)
+![](./img/matrix.jpeg)
 
 ## Primera parte: Destinos y mensajeros
 
